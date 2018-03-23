@@ -1,0 +1,313 @@
+html, body, div, p, input, textarea, h1, h2, h3, h4, h5, ul, li, a 
+  margin 0
+  padding 0
+
+@font-face
+   font-family SourceSansPro-Bold
+   font-style Bold
+   src url(../fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf)
+
+@font-face
+   font-family SourceSansPro-SemiBold
+   font-style Bold
+   src url(../fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf)
+
+
+@font-face
+   font-family SourceSansPro-Regular
+   font-style Regular
+   src url(../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf)
+
+@font-face
+  font-family SourceSansPro-Light 
+  font-style Light
+  src url(../fonts/Source_Sans_Pro/SourceSansPro-Light.ttf)
+
+/* Configuraciones Generales */
+
+html
+  background-color #ECEFF3
+  font-family SourceSansPro-Regular
+
+li
+  list-style none
+
+a 
+  text-decoration none
+
+a.nav-link:hover
+  opacity .6
+
+.container 
+  width 100%
+  margin 0 auto
+
+.form-control
+  display flex
+  flex-direction column
+  margin 10px 0
+
+.form-group
+  display flex
+  flex-wrap wrap 
+  align-items flex-end
+  justify-content space-between
+  .group
+    margin 8px 0
+
+label
+  font-family SourceSansPro-Regular
+  font-size 16px
+  color #6C6B6B
+  margin 4px 0
+
+button 
+  background transparent 
+  border 0 
+  padding 9px 12px
+  cursor pointer
+
+button.color-white
+  color white
+
+.cont-options
+  text-align center
+
+input[type=text],
+input[type=password],
+input[type=number]
+  box-sizing border-box
+  padding 0 10px 
+  border 1px solid #B6B5B5
+  border-radius 10px
+  height 30px
+  width 300px
+
+input[type=submit]
+  border-radius 50px
+  padding 8px 46px
+  color #FFF
+  font-size 14px
+  font-family SourceSansPro-Regular
+
+.blue
+  background-color #116DEA
+
+.red
+  background-color #F32121
+
+table
+  width 100%
+  thead
+    box-shadow 0px 1px 0px #E0E0E0
+    tr
+      th
+        color #9E9E9E
+        font-size 1em 
+        font-family SourceSansPro-Regular
+        padding 10px 0
+  tbody 
+    tr
+      td 
+        color #757575
+        font-size .9em
+        font-family SourceSansPro-Light
+        padding 10px 0
+  tfoot
+    tr 
+      td  
+        float right 
+
+th
+  text-align left 
+
+
+
+/* ********   Dashboard structure of sections    ********* */
+
+.app 
+  display flex
+  flex-wrap wrap
+  .header
+    order 1
+  .footer
+    order 3
+    display block
+    width 100%
+    bottom 0
+    margin-bottom 8px
+  .app-body
+    order 2
+    height 100%
+    width 100%
+    display flex
+    .container-menu
+      height 100vh
+    .main
+      background-color white
+      width calc(100vw - 200px)
+      margin-left 200px
+      margin-top 55px
+      padding 30px 40px
+      animation-duration .8s
+      animation-name main-inactive
+      &.active
+        width 100vw
+        margin-left 50px
+        animation-duration .8s
+        animation-name main-active
+
+@keyframes main-inactive {
+  0% {
+    width: 100vw;
+    margin-left: 50px;
+    }
+  100% {
+    width: calc(100vw - 200px);
+    margin-left: 200px;
+    }
+}
+@keyframes main-active {
+  0% {
+    width: calc(100vw - 200px); 
+    margin-left: 200px;
+    }
+  100% {
+    width: 100vw;
+    margin-left: 50px;
+    }
+}
+
+
+/* ********   Contenido del Menú ******* */
+
+.nav-dropdown-items
+  max-height 0
+  transition max-height .3s ease-in-out
+  padding 5px 14px
+  margin 0
+  overflow-y hidden
+.nav-dropdown.open > .nav-dropdown-items
+  max-height 1000px
+.nav-link  
+  cursor pointer    
+  font-family SourceSansPro-Light
+  font-size 16px
+  color #FFFFFF
+  letter-spacing 0.4px
+  line-height 27px
+  width 100%
+  display block
+  svg 
+    margin-right 5px
+
+.container-menu 
+  position fixed
+  background-color #53b2f8
+  width 200px
+  .head-menu
+    align-items center
+    color white
+    background-color #28A0FF
+    display flex
+    justify-content space-between
+    padding 12px
+    box-sizing border-box
+    p 
+      font-family SourceSansPro-Regular
+      font-size 18px
+      color #FFFFFF
+      letter-spacing -0.05px
+    .title-menu
+      font-family SourceSansPro-SemiBold
+  .container-menu-nav
+    nav 
+      ul 
+        li  
+          padding 10px
+          padding-bottom 2px
+          box-sizing border-box
+          &:hover
+            background-color #6ec1ff
+  
+.container-menu.active
+  animation-name animation-active
+  animation-duration .8s
+  left -150px
+
+.container-menu
+  animation-name animation-inactive
+  animation-duration .8s
+  left 0
+
+@keyframes animation-active {
+  0%   {left: 0;}
+  100% {left: -150px;}
+}
+@keyframes animation-inactive {
+  0%   {left: -150px;}
+  100% {left: 0}
+}
+
+/* ***********  Header  *********** */
+
+.header
+  width 100%
+  position fixed
+  height 55px
+  background #F7F7F7
+  box-shadow 0 2px 4px 0 rgba(0,0,0,0.17)
+  .header-container
+    margin-right 20px
+    height 100%
+    display flex
+    justify-content flex-end
+    align-items center
+    float right 
+    a, p 
+      font-family SourceSansPro-Regular
+      font-size 14px
+      color #6C6B6B
+      letter-spacing -0.04px
+    p 
+      margin-right 15px
+
+/* *******  Footer  ********* */
+
+.footer-container
+  margin-right 20px
+  height 100%
+  display flex
+  justify-content flex-end
+  align-items center
+
+/* Styles Slots (Slot-Table, Slot-Head-Main) */
+
+.header-main
+  margin-bottom 20px
+  display flex
+  justify-content space-between
+  align-items center
+  h2 
+    font-family SourceSansPro-Regular
+    font-size 20px
+    color #575757
+    letter-spacing 0
+
+.container-paginate
+  float right 
+  margin-top 20px
+  button
+    padding 10px 20px
+    background-color #2196F3
+    border 0
+    border-radius 2px
+    color white
+  span 
+    color #757575
+    margin 0 8px
+
+/* fontawesome */
+.fa-angle-right 
+  float right 
+  margin-top 5px
