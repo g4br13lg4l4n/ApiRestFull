@@ -18,7 +18,6 @@ Request.getCostumers = () => {
 }
 
 Request.addCostumer = (user) => {
-    console.log(user)
     return new Promise((resolve, reject) => {
         Axios.post(Api.AppCostumers.addCostumer, user)
         .then(res => {
@@ -29,9 +28,5 @@ Request.addCostumer = (user) => {
         })
     })
 }
-
-
-
-
 
 export default Request

@@ -28,7 +28,7 @@ window.Request = Request
 
 Axios.defaults.headers.post['Content-Type'] = 'multipart/form-data';
 
-Axios.defaults.baseURL = 'http://localhost:8000/'
+Axios.defaults.baseURL = 'http://sistem.gasapplp.com/'
 window.Axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest',
 }

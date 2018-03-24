@@ -9,7 +9,7 @@
         <div slot="SlotFormGroup" class="form-group">
           <div class="group">
             <label for="name">Nombre</label>
-            <input type="text" v-model="user.name" id="name" placeholder="Nombre">
+            <input type="text" v-model="user.nombre" id="name" placeholder="Nombre">
           </div>
           <div class="group">
             <label for="user">Usuario</label>
@@ -17,7 +17,7 @@
           </div>
           <div class="group">
             <label for="email">Email</label>
-            <input type="text" v-model="user.email" id="email" placeholder="Email">
+            <input type="text" v-model="user.password" id="email" placeholder="Email">
           </div>
           <div class="group">
             <label for="password">Contraseña</label>
@@ -54,9 +54,9 @@
     data: function() {
       return {
         user: {
-          name: '',
+          nombre: '',
           user: '',
-          email: '',
+          correo: '',
           password:'',
           password_confirmation: '',
           phone:'',

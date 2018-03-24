@@ -16,8 +16,8 @@
        </tr>
 
        <tr slot="tbody" v-for="costumer in costumers">
-          <td>{{ costumer.name }}</td>
-          <td>{{ costumer.email }}</td>
+          <td>{{ costumer.nombre }}</td>
+          <td>{{ costumer.correo }}</td>
           <td class="cont-options">
             <button type="submit">
               <font-awesome-icon :icon="['fas', 'ellipsis-v']" />
